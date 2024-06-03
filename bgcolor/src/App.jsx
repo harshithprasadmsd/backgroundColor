@@ -4,11 +4,24 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [color, setColor] = useState("black")
 
   return (
     <>
-     <h1 className='bg-green-500 text-3xl'>a bg changer app with vite</h1>
+     <div style={{ backgroundColor: color }}>
+      <h1>hello</h1>
+     </div>
+     <div>
+      <button style={{backgroundColor :"red"}} onClick={()=>{if(color=="black"){setColor("red")}
+    else{
+      setColor("black")
+    }}}>red</button>
+      <br />
+      <button style={{backgroundColor :"green"}} onClick={()=>{if(color=="black"){setColor("green")}
+    else{
+      setColor("black")
+    }}}>green</button>
+     </div>
     </>
   )
 }
